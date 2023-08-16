@@ -1,6 +1,6 @@
 # DYNAMIC-LINE
 🔍 What's Inside:
-In this repository, you'll find the code and assets that power a captivating animation. When you hover over the selected div or element, a sleek white line elegantly emerges with a gradual increase in width. The magic happens as the line gracefully retracts upon mouse leave, moving towards the right direction. 🎯
+In this repository, you'll find the code and assets that power a captivating animation. When you hover over the selected div or element, a sleek line elegantly emerges with a gradual increase in width. The magic happens as the line gracefully retracts upon mouse leave, moving towards the right direction. 🎯
 
 💡 How It Works:
 By leveraging the capabilities of GSAP, I've created a seamless animation that enhances user interaction and user experience. The precision of timing and easing functions brings a professional touch to the design, making it stand out.
