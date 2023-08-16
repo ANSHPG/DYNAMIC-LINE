@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+        }
+
+        .position {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            opacity: 1;
+            font-size: 30px;
+            margin-bottom: -15px;
+            align-self: center;
+        }
+
+        .on {
+            opacity: 0.7;
+        }
+
+        .off {
+            color: crimson;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+            align-self: center;
+            width: fit-content;
+
+        }
+
+        .content {
+            font-size: 100px;
+            align-self: center;
+            color: greenyellow;
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="position">cursor <span class="on">on</span> <span class="off">off</span> div</span>
+    <div class="main">
+        <h5 class="content">HOVER</h5>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        let menu = document.querySelector(".main");
+        let menu_line = document.querySelector(".line");
+        let content = document.querySelector(".content");
+        let on = document.querySelector(".on");
+        let off = document.querySelector(".off");
+
+        menu.addEventListener("mouseover", function () {
+            let div = document.createElement("span");
+            div.style.height = "10px";
+            div.style.width = "0px";
+            div.style.background = "#adff2f";
+            div.style.position = "absolute";
+            div.style.bottom = "0px";
+            div.style.opacity =
+                menu.appendChild(div);
+
+            gsap.to(div, {
+                x: 0,
+                width: '100%',
+                duration: 0.5,
+                opacity: 1,
+                ease: Power3,
+            })
+
+            gsap.to(on, {
+                color: "chartreuse",
+                opacity: 1,
+                duration: 0.5
+            })
+            gsap.to(off, {
+                color: "#ffffff",
+                opacity: 0.7,
+                duration: 0.5
+            })
+
+            menu.addEventListener("mouseleave", function () {
+                gsap.to(div, {
+                    x: content.getBoundingClientRect().width,
+                    width: 0,
+                    duration: 0.4,
+                    delay: 0.1,
+                    ease: Power3,
+                })
+
+                setTimeout(function () {
+                    div.remove();
+                }, 550)
+
+                gsap.to(on, {
+                    color: "#ffffff",
+                    opacity: 0.7,
+                    duration: 0.5,
+                    delay: 0.1
+                })
+                gsap.to(off, {
+                    color: "crimson",
+                    opacity: 1,
+                    duration: 0.5,
+                    delay: 0.1
+                })
+            })
+
+        })
+    </script>
+</body>
+
+</html>
