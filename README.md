@@ -1,4 +1,7 @@
 # DYNAMIC-LINE
+
+https://github.com/ANSHPG/DYNAMIC-LINE/assets/132222062/07574896-2c89-4d86-afe4-d7ef77834859
+
 🔍 What's Inside:
 In this repository, you'll find the code and assets that power a captivating animation. When you hover over the selected div or element, a sleek line elegantly emerges with a gradual increase in width. The magic happens as the line gracefully retracts upon mouse leave, moving towards the right direction. 🎯
 
@@ -13,3 +16,6 @@ Feel free to explore the code and assets in this repository. If you're into web 
 
 🌐 Connect:
 Let's connect and discuss more about animations, GSAP, and web development. I'm excited to share my knowledge and learn from the community. Feel free to reach out and collaborate!
+
+
+
